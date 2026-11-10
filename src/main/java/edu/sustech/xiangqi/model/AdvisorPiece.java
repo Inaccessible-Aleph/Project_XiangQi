@@ -1,6 +1,6 @@
 package edu.sustech.xiangqi.model;
 
-// 红仕：每次斜走一格，不能离开红方九宫
+// 红仕
 
 public class AdvisorPiece extends Piece {
     public AdvisorPiece() {
@@ -20,7 +20,6 @@ public class AdvisorPiece extends Piece {
         }
 
         // 行判断
-        // TODO: 补齐黑方棋子的行判断
         return toRow >= 7 && toRow <= 9;
     }
 }

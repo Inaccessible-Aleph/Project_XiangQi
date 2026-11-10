@@ -9,7 +9,19 @@ public class GeneralPiece extends Piece {
 
     @Override
     public boolean canMove(Board board, int fromRow, int fromCol, int toRow, int toCol) {
-        // TODO：实现帅的移动规则。
-        return false;
+        int row = Math.abs(toRow - fromRow);
+        int col = Math.abs(toCol - fromCol);
+        if (!((row == 1 && col == 0) || (row == 0 && col == 1))) {
+            return false;
+        }
+
+        //TODO:facing generals
+
+        if (toCol < 3 || toCol > 5) {
+            return false;
+        }
+
+        return toRow >= 7 && toRow <= 9;
     }
 }
+
