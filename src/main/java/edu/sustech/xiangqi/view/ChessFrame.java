@@ -25,3 +25,5 @@ public final class ChessFrame extends JFrame {
         return boardPanel;
     }
 }
+//TODO:游客模式下禁用存档功能
+//TODO:多用户存档隔离
