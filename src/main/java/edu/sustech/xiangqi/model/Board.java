@@ -55,6 +55,7 @@ public class Board {
     public boolean isInside(int row, int col) {
         return row >= 0 && row < ROWS && col >= 0 && col < COLS;
     }
+    private boolean isRedTurn = true;
 
     public Piece getPieceAt(int row, int col) {
         if (!isInside(row, col)) {
@@ -76,7 +77,7 @@ public class Board {
             return false;
         }
 
-        // TODO: 加入回合检查，只允许当前一方移动自己的棋子
+        if (piece.isRed() != isRedTurn) return false;
 
         boolean capture = false;
         if (getPieceAt(toRow, toCol) != null) {
@@ -93,11 +94,10 @@ public class Board {
 
         // TODO: 检查走完后己方将帅是否安全
 
-        if (capture) pieces[toRow][toCol] = null;
         pieces[fromRow][fromCol] = null;
         pieces[toRow][toCol] = piece;
-
-        // TODO: 仅在成功移动后切换回合，并判断将军、胜负等状态
+        isRedTurn = !isRedTurn;
+        // TODO: 仅在成功移动后判断将军、胜负等状态
         return true;
     }
 }

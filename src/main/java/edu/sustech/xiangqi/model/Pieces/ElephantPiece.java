@@ -12,18 +12,14 @@ public class ElephantPiece extends Piece {
 
     @Override
     public boolean canMove(Board board, int fromRow, int fromCol, int toRow, int toCol) {
-        //TODO:other piece has blocked the path of elephant
+        if (Math.abs(toRow - fromRow) != 2 || Math.abs(toCol - fromCol) != 2) return false;
+        if (toRow < 5 || toRow > 9) return false; // 不能过河
 
-        int row = Math.abs(toRow - fromRow);
-        int col = Math.abs(toCol - fromCol);
-        if (row != 2 || col != 2) {
-            return false;
-        }
+        // 塞象眼判断
+        int eyeRow = (fromRow + toRow) / 2;
+        int eyeCol = (fromCol + toCol) / 2;
+        if (board.getPieceAt(eyeRow, eyeCol) != null) return false;
 
-        if (toCol < 0 || toCol > 8) {
-            return false;
-        }
-
-        return toRow >= 5 && toRow <= 9;
+        return true;
     }
 }

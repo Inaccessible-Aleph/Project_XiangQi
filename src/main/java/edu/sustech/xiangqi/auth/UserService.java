@@ -4,6 +4,7 @@ import java.io.*;
 import java.util.Properties;
 
 public class UserService {
+    // 注册与登录方法
     // 文件保存在项目根目录下的 users.properties
     private static final String FILE_PATH = "users.properties";
 
