@@ -7,7 +7,7 @@ import edu.sustech.xiangqi.model.Piece;
 
 public class RookPiece extends Piece {
     public RookPiece() {
-        super("车", true);
+        super("车", 5);
     }
 
     @Override

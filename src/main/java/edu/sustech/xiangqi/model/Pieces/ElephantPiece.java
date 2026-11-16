@@ -7,7 +7,7 @@ import edu.sustech.xiangqi.model.Piece;
 
 public class ElephantPiece extends Piece {
     public ElephantPiece() {
-        super("相", true);
+        super("相", 3);
     }
 
     @Override

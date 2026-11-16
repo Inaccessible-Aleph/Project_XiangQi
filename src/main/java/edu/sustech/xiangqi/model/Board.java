@@ -100,4 +100,6 @@ public class Board {
         // TODO: 仅在成功移动后判断将军、胜负等状态
         return true;
     }
+
+    //TODO: 提供导入、导出棋盘状态的接口
 }

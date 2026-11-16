@@ -7,7 +7,7 @@ import edu.sustech.xiangqi.model.Piece;
 
 public class GeneralPieceB extends Piece {
     public GeneralPieceB() {
-        super("将", false);
+        super("将", -1);
     }
 
     @Override
