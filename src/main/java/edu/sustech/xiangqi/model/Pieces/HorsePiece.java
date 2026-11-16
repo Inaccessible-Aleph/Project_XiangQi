@@ -7,7 +7,7 @@ import edu.sustech.xiangqi.model.Piece;
 
 public class HorsePiece extends Piece {
     public HorsePiece() {
-        super("马", true);
+        super("马", 4);
     }
 
     @Override

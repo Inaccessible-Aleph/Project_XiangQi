@@ -7,7 +7,7 @@ import edu.sustech.xiangqi.model.Piece;
 
 public class SoldierPieceB extends Piece {
     public SoldierPieceB() {
-        super("卒", false);
+        super("卒", -7);
     }
 
     @Override

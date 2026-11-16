@@ -7,7 +7,7 @@ import edu.sustech.xiangqi.model.Piece;
 
 public class CannonPieceB extends Piece {
     public CannonPieceB() {
-        super("炮", false);
+        super("炮", -6);
     }
 
     @Override

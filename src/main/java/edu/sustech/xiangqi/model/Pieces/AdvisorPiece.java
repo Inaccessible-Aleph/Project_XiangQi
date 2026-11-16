@@ -7,7 +7,7 @@ import edu.sustech.xiangqi.model.Piece;
 
 public class AdvisorPiece extends Piece {
     public AdvisorPiece() {
-        super("仕", true);
+        super("仕", 2);
     }
 
     @Override

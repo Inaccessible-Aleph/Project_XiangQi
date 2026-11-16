@@ -5,10 +5,12 @@ package edu.sustech.xiangqi.model;
 public abstract class Piece {
     private final String name;
     private final boolean isRed;
+    private final int pieceType;
 
-    protected Piece(String name, boolean isRed) {
+    protected Piece(String name, int pieceType) {
         this.name = name;
-        this.isRed = isRed;
+        this.isRed = pieceType > 0;
+        this.pieceType = pieceType;
     }
 
     public String getName() {
@@ -19,8 +21,13 @@ public abstract class Piece {
         return isRed;
     }
 
+    public int getPieceType() {
+        return pieceType;
+    }
+
     /**
      * 判断本棋子的局部走法是否合法
+     *
      * @return 是否可以移动
      */
     public abstract boolean canMove(Board board, int fromRow, int fromCol, int toRow, int toCol);
